@@ -7,6 +7,8 @@ const Media: CollectionConfig = {
   },
   upload: {
     adminThumbnail: "thumbnail",
+    staticURL: "/uploads",
+    staticDir: "../uploads",
     imageSizes: [
       {
         name: "thumbnail",

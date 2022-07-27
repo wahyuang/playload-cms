@@ -10,13 +10,12 @@ export default buildConfig({
   admin: {
     user: User.slug,
   },
-  collections: [
-    User,
-    Post,
-    Media,
-    // Add Collections here
-    // Examples,
-  ],
+  collections: [User, Post, Media],
+  upload: {
+    limits: {
+      fileSize: 5000000, // 2MB, written in bytes
+    },
+  },
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),
   },
