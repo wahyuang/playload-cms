@@ -13,7 +13,6 @@ const slug: Slug = (fieldToUse = "title", overrides) =>
       type: "text",
       localized: true,
       unique: true,
-      required: true,
       admin: {
         position: "sidebar",
       },

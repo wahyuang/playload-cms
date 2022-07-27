@@ -1,12 +1,18 @@
 import { CollectionConfig } from "payload/types";
 import featuredImage from "../fields/featuredImage";
 import slug from "../fields/slug";
+import { isAdmin, isAdminOrCreatedBy } from "../utilities/user";
 
 const Posts: CollectionConfig = {
-  slug: "posts",
+  slug: "post",
   admin: {
-    useAsTitle: "post_title",
-    defaultColumns: ["post_title", "status"],
+    useAsTitle: "title",
+    defaultColumns: ["title", "status", "author"],
+  },
+  access: {
+    read: () => true,
+    update: isAdminOrCreatedBy,
+    delete: isAdminOrCreatedBy,
   },
   fields: [
     {
@@ -51,9 +57,14 @@ const Posts: CollectionConfig = {
     {
       name: "author",
       type: "relationship",
-      relationTo: "users",
+      relationTo: "user",
       admin: {
         position: "sidebar",
+      },
+      access: {
+        read: () => true,
+        update: isAdmin,
+        create: isAdmin,
       },
       // defaultValues can use functions to return data to populate the create form and also when making POST requests the server will use the value or function to fill in any undefined fields before validation occurs
       defaultValue: ({ user }) => user.id,

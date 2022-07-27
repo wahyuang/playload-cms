@@ -1,18 +1,18 @@
 import { buildConfig } from "payload/config";
 import path from "path";
 // import Examples from './collections/Examples';
-import Users from "./collections/Users";
-import Posts from "./collections/Posts";
+import User from "./collections/User";
+import Post from "./collections/Post";
 import Media from "./collections/Media";
 
 export default buildConfig({
   serverURL: "http://localhost:9999",
   admin: {
-    user: Users.slug,
+    user: User.slug,
   },
   collections: [
-    Users,
-    Posts,
+    User,
+    Post,
     Media,
     // Add Collections here
     // Examples,
