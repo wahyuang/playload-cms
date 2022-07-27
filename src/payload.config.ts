@@ -4,13 +4,14 @@ import path from "path";
 import User from "./collections/User";
 import Post from "./collections/Post";
 import Media from "./collections/Media";
+import Page from "./collections/Page";
 
 export default buildConfig({
   serverURL: "http://localhost:9999",
   admin: {
     user: User.slug,
   },
-  collections: [User, Post, Media],
+  collections: [User, Post, Media, Page],
   upload: {
     limits: {
       fileSize: 5000000, // 2MB, written in bytes
