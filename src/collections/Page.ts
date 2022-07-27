@@ -1,5 +1,6 @@
 import { CollectionConfig } from "payload/types";
 import Hero from "../blocks/hero";
+import MediaText from "../blocks/mediaText";
 import slug from "../fields/slug";
 import { isAdmin } from "../utilities/user";
 
@@ -27,7 +28,7 @@ const Page: CollectionConfig = {
       name: "blocks",
       type: "blocks",
       label: "Layout",
-      blocks: [Hero],
+      blocks: [Hero, MediaText],
     },
     {
       type: "relationship",
