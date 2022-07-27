@@ -1535,6 +1535,11 @@
   resolved "https://registry.yarnpkg.com/@nicolo-ribaudo/chokidar-2/-/chokidar-2-2.1.8-no-fsevents.3.tgz#323d72dd25103d0c4fbdce89dadf574a787b1f9b"
   integrity sha512-s88O1aVtXftvp5bCPB7WnmXc5IwOZZ7YPuwNPt+GtOOXpPvad1LfbmjYv+qII7zP6RU2QGnqve27dnLycEnyEQ==
 
+"@payloadcms/plugin-seo@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@payloadcms/plugin-seo/-/plugin-seo-1.0.6.tgz#dd75d224e7fdde356971688fe1fa539d905f220b"
+  integrity sha512-7f/ZChMELcpJ9z+uaC1iVsV6zSYxUWD7oS75jt0uyiqZ6p8uE1k8yQLVaq5IxdBTWrTIGkGHj710IWfjnLOxYg==
+
 "@polka/url@^1.0.0-next.20":
   version "1.0.0-next.21"
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"

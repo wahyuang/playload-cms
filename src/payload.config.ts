@@ -1,5 +1,6 @@
 import { buildConfig } from "payload/config";
 import path from "path";
+import seo from "@payloadcms/plugin-seo";
 // import Examples from './collections/Examples';
 import User from "./collections/User";
 import Post from "./collections/Post";
@@ -23,4 +24,10 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, "generated-schema.graphql"),
   },
+  plugins: [
+    seo({
+      collections: ["page"],
+      generateTitle: ({ doc }) => `${doc.title.value} | Playload`,
+    }),
+  ],
 });
