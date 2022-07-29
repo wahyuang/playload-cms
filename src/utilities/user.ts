@@ -1,4 +1,4 @@
-export const isAdminOrCreatedBy = ({ req: { user } }) => {
+export const isAdminOrCreatedBy = ({ req: { user }, id, data }) => {
   // Scenario #1 - Check if user has the 'admin' role
   if (user && user.role === "admin") {
     return true;
